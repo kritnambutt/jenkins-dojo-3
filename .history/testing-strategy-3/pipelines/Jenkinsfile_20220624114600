@@ -40,7 +40,6 @@ pipeline {
                 dir("${SCRIPTS_PATH}") {
                    sh """
                     echo "Deployment..."
-                    kill -9 3000
                     """
                 }
             }
