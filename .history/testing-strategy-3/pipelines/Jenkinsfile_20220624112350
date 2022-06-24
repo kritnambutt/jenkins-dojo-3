@@ -18,7 +18,6 @@ pipeline {
                 dir("${SCRIPTS_PATH}") {
                     sh """
                     echo "Build..."
-                    cd ../web && npm install && npm start
                     """
                 }
             }
@@ -28,7 +27,6 @@ pipeline {
                 dir("${SCRIPTS_PATH}") {
                    sh """
                     echo "Test..."
-                    cd ../e2e-web && npm install && npm run test:chrome
                     """
                 }
             }

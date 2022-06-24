@@ -8,7 +8,6 @@
     "merge": "$(npm bin)/cucumber-json-merge -d cypress/cucumber-json -o cucumber_report.json -r ",
     "test": "$(npm bin)/cypress-tags run -e TAGS='not @skip and not @draft'",
     "test:chrome": "$(npm bin)/cypress run --browser chrome --headed",
-    "test:edge": "$(npm bin)/cypress run --browser edge --headed",
     "test:focus": "$(npm bin)/cypress-tags run --browser chrome --headed -e TAGS='@focus and not @skip'",
     "lint": "$(npm bin)/eslint '**/*.js'",
     "lint-fix": "$(npm bin)/eslint '**/*.js' --fix",
