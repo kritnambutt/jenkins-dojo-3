@@ -30,7 +30,7 @@ pipeline {
                 dir("${SCRIPTS_PATH}") {
                    sh """
                     echo "Test..."
-                    cd ../e2e-web && npm install && npm run test:chrome
+                       cd ../e2e-web && npm install && npm run test:chrome
                     """
                 }
             }

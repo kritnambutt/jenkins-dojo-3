@@ -4,6 +4,7 @@ pipeline {
     tools {nodejs "NodeJS"}
 
     environment {
+        // PROJECT_PATH="${env.JENKINS_HOME}/workspace/OnBoardingPart3/testing-strategy-3"
         PROJECT_PATH="${env.JENKINS_HOME}/workspace/testing-strategy-3/testing-strategy-3"
         SCRIPTS_PATH="${PROJECT_PATH}/scripts"
         DEV="dev"
@@ -30,7 +31,7 @@ pipeline {
                 dir("${SCRIPTS_PATH}") {
                    sh """
                     echo "Test..."
-                    cd ../e2e-web && npm install && npm run test:chrome
+                       cd ../e2e-web && npm install && npm run test:chrome
                     """
                 }
             }
