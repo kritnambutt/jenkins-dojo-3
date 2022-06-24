@@ -16,30 +16,30 @@ pipeline {
         stage('Build') {
            steps {
                 dir("${SCRIPTS_PATH}") {
-                    sh '''
+                    sh """
                     echo "Build..."
                     cd ../web && npm install && npm start
-                    '''
+                    """
                 }
             }
         }
         stage('Test environment DEV') {
             steps {
                 dir("${SCRIPTS_PATH}") {
-                   sh '''
+                   sh """
                     echo "Test..."
                     cd ../e2e-web && npm install && npm run test:chrome
-                    '''
+                    """
                 }
             }
         }
         stage('Deployment') {
             steps {
                 dir("${SCRIPTS_PATH}") {
-                   sh '''
+                   sh """
                     echo "Deployment..."
                     kill -9 $(lsof -ti:3000)
-                    '''
+                    """
                 }
             }
         }
